@@ -13,6 +13,7 @@ mkdir -p src/js/actions
 mkdir -p src/js/constants
 npm i react-redux --save-dev
 mkdir -p src/js/components
+npm i redux-thunk --save-dev
 ```
 
 ##Redux principles
@@ -40,3 +41,9 @@ mapStateToProps -
 mapDispatchToProps - 
 
 handleSubmit in Form.js
+
+##middleware
+used redux middleware to check the action payload before the action goes to the reducer
+
+##asynchronous actions in redux
+return functions from action creators, and inside the function call APIs, delay the dispatch of an action etc.
