@@ -31,6 +31,7 @@ class ConnectedForm extends Component {
     this.props.addArticle({ title });
     this.setState({ title: "" });
   }
+
   render() {
     const { title } = this.state;
     return (
