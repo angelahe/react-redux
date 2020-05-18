@@ -14,6 +14,7 @@ mkdir -p src/js/constants
 npm i react-redux --save-dev
 mkdir -p src/js/components
 npm i redux-thunk --save-dev
+npm i redux-saga --save-dev
 ```
 
 ##Redux principles
@@ -42,8 +43,18 @@ mapDispatchToProps -
 
 handleSubmit in Form.js
 
-##middleware
+## middleware
 used redux middleware to check the action payload before the action goes to the reducer
 
-##asynchronous actions in redux
+## asynchronous actions in redux with redux-thunk
 return functions from action creators, and inside the function call APIs, delay the dispatch of an action etc.
+can put API call directly inside an action creator
+
+## using redux-saga middleware for managing side effects
+used to deal with API calls, storage access
+has clear separation between sychronous and asynchronous logic
+uses generator functions - functions that can be paused and resumed on demand
+replaces thunk implementation
+implements worker function and watcher function
+worker = call from redux-saga/effects
+    when the data is loaded we can dispatch another action from our saga with put 
