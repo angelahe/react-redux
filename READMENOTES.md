@@ -58,3 +58,4 @@ replaces thunk implementation
 implements worker function and watcher function
 worker = call from redux-saga/effects
     when the data is loaded we can dispatch another action from our saga with put 
+    worker sagas take the action as a parameter
